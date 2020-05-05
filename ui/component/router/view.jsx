@@ -152,6 +152,8 @@ function AppRouter(props: Props) {
       <Redirect from={`/$/${PAGES.DEPRECATED__TAGS_FOLLOWING}`} to={`/$/${PAGES.TAGS_FOLLOWING}`} />
       <Redirect from={`/$/${PAGES.DEPRECATED__TAGS_FOLLOWING_MANAGE}`} to={`/$/${PAGES.TAGS_FOLLOWING_MANAGE}`} />
 
+      {/* <Route {...props} path={`/`} exact component={LibraryPage} /> */}
+
       <Route path={`/`} exact component={HomePage} />
       <Route path={`/$/${PAGES.DISCOVER}`} exact component={DiscoverPage} />
       <Route path={`/$/${PAGES.AUTH_SIGNIN}`} exact component={SignInPage} />
@@ -177,7 +179,6 @@ function AppRouter(props: Props) {
       <Route path={`/$/${PAGES.INVITE}/:referrer`} exact component={InvitedPage} />
 
       <PrivateRoute {...props} path={`/$/${PAGES.INVITE}`} component={InvitePage} />
-      <PrivateRoute {...props} path={`/$/${PAGES.DOWNLOADED}`} component={FileListDownloaded} />
       <PrivateRoute {...props} path={`/$/${PAGES.PUBLISHED}`} component={FileListPublished} />
       <PrivateRoute {...props} path={`/$/${PAGES.CREATOR_DASHBOARD}`} component={CreatorDashboard} />
       <PrivateRoute {...props} path={`/$/${PAGES.PUBLISH}`} component={PublishPage} />

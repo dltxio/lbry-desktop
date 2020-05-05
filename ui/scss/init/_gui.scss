@@ -1,6 +1,25 @@
 // Generic html styles used across the App
 // component specific styling should go in the component scss file
 
+.purchased {
+  height: 1.75rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  transform: skew(30deg);
+
+  background-color: rgb(255, 51, 224);
+
+  svg {
+    transform: skew(-30deg);
+    height: 1rem;
+    width: 1rem;
+    stroke: #fff;
+    margin-top: 0.4rem;
+  }
+}
+
 *::selection {
   background-color: var(--color-text-selection-bg);
   color: var(--color-text-selection);
